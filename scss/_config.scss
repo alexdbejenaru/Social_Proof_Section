@@ -1,0 +1,26 @@
+// Colors
+
+$vd_magenta: hsl(300, 43%, 22%);
+$Soft_Pink: hsl(333, 80%, 67%);
+$Dk_Grayish_Magenta: hsl(303, 10%, 53%);
+$Lt_Grayish_Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+// Font-weights
+
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+@mixin responsive_mid {
+    @media screen and (min-width: 756px) {
+        @content; 
+    }
+}
+
+@mixin responsive {
+    @media screen and (min-width: 1400px) {
+        @content; 
+    }
+}

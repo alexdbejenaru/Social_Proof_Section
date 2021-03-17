@@ -1,0 +1,146 @@
+@include responsive_mid {
+    .parent {
+        margin: 0 9rem;
+        height: min-content;
+    }
+
+    .rating {
+
+        & > div {
+            margin: 0;
+        }
+
+        &_reviews {
+            justify-content: center;
+            align-self: flex-start;
+        }
+
+        &_guru {
+            justify-content: center;
+        }
+
+        &_besttech {
+            justify-content: center;
+            align-self: flex-end;
+        }
+    }
+    
+    .attribution {
+        transform: translateY(25rem);
+    }
+
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        height: 18rem;
+        justify-content: space-between;
+
+        :nth-child(1) {
+            align-self: flex-start;
+        }
+
+        :nth-child(2) {
+            align-self: center;
+        }
+
+        :nth-child(3) {
+            align-self: flex-end;
+        }
+
+        .user {
+            margin: 0 0 1rem;
+        }
+    }
+}
+
+@include responsive {
+
+    .attribution {
+        transform: translateY(0rem);
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 20rem auto;
+        margin: 9.5rem;
+
+        .presentation {
+            .title {
+                text-align: left;
+                margin: 0 0 1rem;
+                padding: 0 10rem 0 0;
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+
+            .text {
+                padding: 0 8rem 0 0;
+                text-align: left;
+                margin: 0;
+            }
+        }
+
+        .rating {
+            justify-content: center;
+
+            &_reviews, &_guru, &_besttech {
+                display: flex;
+                align-items: center;
+                margin: 0 0 1rem;
+                width: 28rem;
+
+                .stars {
+                    margin: 0;
+                }
+            }
+
+            &_reviews {
+                justify-content: center;
+                align-self: flex-start;
+            }
+
+            &_guru {
+                justify-content: center;
+            }
+
+            &_besttech {
+                justify-content: center;
+                align-self: flex-end;
+            }
+
+            h5 {
+                margin-left: 1.5rem;
+            }
+        }
+
+        .reviews {
+            grid-column: 1 / span 2;
+            display: flex;
+            flex-direction: row;
+            height: 18rem;
+            justify-content: space-between;
+
+            :nth-child(1) {
+                align-self: flex-start;
+            }
+
+            :nth-child(2) {
+                align-self: center;
+            }
+
+            :nth-child(3) {
+                align-self: flex-end;
+            }
+
+        .user {
+            max-height: 15rem;
+            max-width: 23.5rem;
+            margin: 0;
+            }
+
+        }
+
+    }
+
+}

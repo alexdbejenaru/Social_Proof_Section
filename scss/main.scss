@@ -1,0 +1,127 @@
+@import 'config', 'resets', 'responsive';
+
+body {
+    font-family: 'Spartan', sans-serif;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    bottom: .5rem;
+    width: 100%;
+    color: lighten(#000, 60%);
+    // left: 50%;
+    // transform: translateX(-50%);
+    position: absolute;
+    margin: 0 auto;
+
+    a {
+        color: $vd_magenta;
+    }
+}
+
+.presentation {
+    .title {
+        text-align: center;
+        padding: 0 3rem;
+        font-size: 2rem;
+        color: $vd_magenta;
+        line-height: 2rem;
+        letter-spacing: -.1rem;
+        margin: 5rem 0 2rem 0;
+    }
+
+    .text {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.7rem;
+        letter-spacing: -.05rem;
+        color: $Dk_Grayish_Magenta;
+        font-weight: $medium;
+        padding: 0 1rem;
+        max-width: 40rem;
+        margin: 0 auto 2rem;
+    }
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 17rem;
+    color: $vd_magenta;
+    font-weight: $bold;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    
+    & > div {
+        background-color: $Lt_Grayish_Magenta;
+        width: 95%;
+        padding: 1rem;
+        margin: 0;
+        border-radius: .5rem;
+        max-width: 30rem;
+        
+        .stars {
+            margin-bottom: .5rem;
+            
+            img {
+                padding: 0 .1rem;
+            }
+        }
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .user {
+        background-color: $vd_magenta;
+        margin-bottom: 1rem;
+        border-radius: .5rem;
+        padding: 2rem 1.6rem;
+        max-width: 30rem;
+        width: 95%;
+    }
+
+    .pic_name {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 3rem auto;
+        margin: 0 0 2rem 0;
+    }
+    img {
+        border-radius: 50%;
+        height: 3rem;
+        grid-row: 1 / span 2;
+    }
+
+    h5 {
+        margin-left: 1.5rem;
+    }
+
+    .verified {
+        color: $Soft_Pink;
+        opacity: .9;
+        font-weight: $regular;
+        align-self: center;
+    }
+
+    .name {
+        color: $Lt_Grayish_Magenta;
+        align-self: end;
+    }
+
+    p {
+        color: $Lt_Grayish_Magenta;
+        font-size: .9rem;
+        line-height: 1.5rem;
+    }
+}
